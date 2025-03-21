@@ -75,9 +75,8 @@ body {
     width: 30%;
     border: none;
     color: white;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
+    
+    
 }
 
 p {
@@ -95,9 +94,15 @@ h1 {
     left: 50px;
 }
 
-.icon-back {
+.back-button {
     display: flex;
     align-items: start;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
     
 }
 
