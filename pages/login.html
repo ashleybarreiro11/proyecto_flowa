@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/login.css">
     <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>login</title>
 </head>
 <body>
+
+    <div class="img-logo">
+        <img src="../Group 122.png" alt="">
+    </div>
 
     <div class="Background-Triangle">
         <div class="triangle top-right"></div>
@@ -15,19 +20,27 @@
     </div>
 
     <div class="login-container">
+
+        <div class="icon-back">
+            <i class="fa fa-angle-left" aria-hidden="true"> Atrás </i>
+        </div>
+    
         <h1>¡Bienvenido a <br>
             Flowa!</h1><br><br>
-        
-        <input type="email" placeholder="Correo electrónico" class="input-field">
-        <input type="password" placeholder="Contraseña" class="input-field"><br>
-       <br> <button class="btn-ingresar">Ingresar</button>
+
+            <div class="campos">
+                <i class=" Icon fa fa-envelope-o" aria-hidden="true"></i>
+                <input type="email" placeholder="Correo electrónico" required class="input-field">
+            </div>
+
+            <div class="campos">
+                <i class=" Icon fa fa-unlock-alt" aria-hidden="true"></i>
+                <input type="password" placeholder="Contraseña" required class="input-field">
+            </div>
+        <br>
+       <br> <button type="Icon submit" class="btn-ingresar">Ingresar</button>
        <br>
        <p> ¿No tienes cuenta? ¡Registrate!</p>
-       
     </div>
-
-
-   
-    
 </body>
 </html>
