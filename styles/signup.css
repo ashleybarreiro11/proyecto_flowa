@@ -110,4 +110,16 @@ h2 {
     width: 80%;
 }
 
+.back-button {
+    display: flex;
+    align-items: start;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-style: bold;
+    
+}
+
 

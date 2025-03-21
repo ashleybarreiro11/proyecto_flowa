@@ -104,7 +104,7 @@ h1 {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 30px bold;
+    font-style: bold;
     
 }
 
@@ -127,7 +127,8 @@ h1 {
 .campos .Icon {
     position: absolute;
     left: 15px;
-    top: 12px;
+    
+    bottom: 20px;
     color: darkgrey;
 }
 
