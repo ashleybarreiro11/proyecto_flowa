@@ -7,26 +7,19 @@ body {
     min-height: 100vh;
 }
 
-.container {
+.right-section {
     position: relative;
-    width: 100%;
+    width: 50%;
     max-width: 500px;
     background: white;
-    border-radius: 10px;
+    border-radius: 40px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 80px;
     display: flex;
     overflow: hidden;
-}
+    justify-content: center;
+    align-items: center;
 
-.background-lime {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30%;
-    height: 100%;
-    background-color: #C2D452;
-    border-radius: 50% 0 0 50%;
 }
 
 .img-logo{
@@ -37,10 +30,11 @@ body {
 
 .form-container {
     position: relative;
-    width: 100%;
     background: white;
     padding: 20px;
     border-radius: 10px;
+    align-items: center;
+    
     
     
 }
@@ -65,13 +59,14 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     margin-bottom: 10px;
+    justify-content: space-around;
 }
 
 input {
   
     padding: 8px;
     border: none;
-    border-radius: 5px;
+    border-radius: 35px;
     background-color: #e5e7eb;
 }
 
@@ -90,13 +85,14 @@ input {
 }
 
 button {
-    width: 100%;
     padding: 10px;
     background-color: #3b82f6;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    align-items: center ;
+
 }
 
 h2 {
@@ -107,7 +103,8 @@ h2 {
 
 .imagen-fondo {
     position: absolute;
-    width: 80%;
+    width: 50%;
+    
 }
 
 .back-button {
@@ -121,5 +118,30 @@ h2 {
     font-style: bold;
     
 }
+
+.telephone {
+    width: 96%;
+    margin-bottom: 10px;
+    gap: 25px;
+
+}
+
+.email {
+    width: 96%;
+    margin-bottom: 10px;
+    gap: 25px;
+    
+
+}
+
+.password {
+    width: 96%;
+    margin-bottom: 10px;
+    gap: 25px;
+
+}
+
+.final-input {}
+
 
 
