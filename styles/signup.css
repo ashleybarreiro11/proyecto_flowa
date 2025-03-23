@@ -108,40 +108,47 @@ h2 {
 }
 
 .back-button {
-    display: flex;
     align-items: start;
     color: #1a1a1a;
     margin-bottom: 10px;
-    background: none;
     border: none;
     cursor: pointer;
-    font-style: bold;
+}
+
+.icon-back {
     
 }
 
 .telephone {
-    width: 96%;
-    margin-bottom: 10px;
-    gap: 25px;
 
+    width: 96%;
+    gap: 25px;
+    
 }
 
 .email {
     width: 96%;
+    height: 96%;
     margin-bottom: 10px;
     gap: 25px;
-    
-
 }
 
 .password {
     width: 96%;
     margin-bottom: 10px;
     gap: 25px;
-
+    
 }
 
-.final-input {}
+.campos .Icon {
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    color: darkgrey;
+    padding-left: 10px;
+}
 
-
-
+.campos {
+    position: relative;
+    margin-bottom: 10px;
+    text-align: left;}
