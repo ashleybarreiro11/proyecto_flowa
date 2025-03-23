@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/signup.css">
     <title>SignUp</title>
 
 </head>
 <body>
 
-    <div class="img">
-        <img src="../Capa_2.png" alt="Persona cocinando">
+   <div class="full-container">
+    <div class="left-section">
+        <div class="imagen-fondo">
+            <img src="../images/Página de Registro.png" alt="">
+        </div>
+    
+        <div class="img-logo">
+            <img src="../images/Logo Flowa.png" alt="">
+        </div>
     </div>
 
-    
-
-    <div class="container">
+    <div class="right-section">
         <div class="form-container">
-            <button class="back-button"> Atrás</button>
+            <div class="icon-back">
+                <a href="index.html">
+                    <button class="back-button" ><i class="fa fa-angle-left" aria-hidden="true"></i>  Atrás</button>
+                </a>
+            </div>
             <h2 class="title">Crea tu cuenta</h2>
     
             <form>
@@ -30,17 +40,40 @@
                     <input type="text" placeholder="Identificación">
                     <input type="text" placeholder="Edad">
                 </div>
-                <div class="input-group">
-                    <input type="text" placeholder="Teléfono">
-                    <input type="text" placeholder="Dirección">
-                </div>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Contraseña">
-                <button class="submit-bottom">Continuar</button>
+               <div class="final-input">
+                  <div class="campos">
+                    <i class=" Icon fa fa-phone" aria-hidden="true"></i>
+                    <input class="telephone" type="text" placeholder="Teléfono">
+                 </div>
+                
+                 <div class="campos">
+                    <i class=" Icon fa fa-envelope-o" aria-hidden="true"></i>
+                    <input type="email" placeholder="Correo electrónico"  class="input-field" required>
+                 </div>
+                
+                  <div class="campos">
+                    <i class=" Icon fa fa-unlock-alt" aria-hidden="true"></i>
+                    <input class="password" type="password" placeholder="Contraseña">
+                  </div>
+               </div>
+                    
+
+                     <a href="login.html">
+                        <button class="submit-bottom">Continuar</button>
+                     </a>
+                
             </form>
         </div>
     </div>
-    <div class="background-green"></div>
+    
+
+
+   </div>
+
+    
+
+   
+    
 
     
 </body>

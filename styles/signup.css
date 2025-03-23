@@ -7,32 +7,148 @@ body {
     min-height: 100vh;
 }
 
-.container {
+.right-section {
     position: relative;
-    width: 100%;
-    max-width: 800px;
+    width: 50%;
+    max-width: 500px;
     background: white;
-    border-radius: 10px;
+    border-radius: 40px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 80px;
     display: flex;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.background-lime {
+.img-logo{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 30%;
-    height: 100%;
-    background-color: #C2D452;
-    border-radius: 50% 0 0 50%;
+    top: 50px;
+    left: 50px;
 }
 
-.img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
+.form-container {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
     
-
-       
+    
+    
 }
+
+.back-button {
+    color: #4b5563;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+}
+
+input {
+  
+    padding: 8px;
+    border: none;
+    border-radius: 35px;
+    background-color: #e5e7eb;
+}
+
+.submit-button {
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #2563eb;
+}
+
+button {
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center ;
+
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.imagen-fondo {
+    position: absolute;
+    width: 50%;
+    
+}
+
+.back-button {
+    align-items: start;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-back {
+    
+}
+
+.telephone {
+
+    width: 96%;
+    gap: 25px;
+    
+}
+
+.email {
+    width: 96%;
+    height: 96%;
+    margin-bottom: 10px;
+    gap: 25px;
+}
+
+.password {
+    width: 96%;
+    margin-bottom: 10px;
+    gap: 25px;
+    
+}
+
+.campos .Icon {
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    color: darkgrey;
+    padding-left: 10px;
+}
+
+.campos {
+    position: relative;
+    margin-bottom: 10px;
+    text-align: left;}
