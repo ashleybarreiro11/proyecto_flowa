@@ -1,5 +1,9 @@
+* {
+    font-family: 'General Sans', sans-serif;
+}
+
 body {
-    font-family: 'General Sans', sans-serif;                     
+                         
     background: white;
     position: relative;
     padding: 0;
@@ -97,23 +101,23 @@ h1 {
 }
 
 .back-button {
+    top: 15px;
+    left: 30px;
+    border: none;
+    background: none;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
     display: flex;
     align-items: start;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-style: bold;
     
 }
-
 .campos input {
 
     width: 90%;
     padding: 10px;
     padding-left: 40px;
-    border: 1px solid #ccc;
     border-radius: 25px;
     outline: none;
 }
@@ -126,8 +130,8 @@ h1 {
 
 .campos .Icon {
     position: absolute;
+    top: 20px;
     left: 15px;
-    
     bottom: 20px;
     color: darkgrey;
 }

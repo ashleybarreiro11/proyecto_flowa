@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+    <title>Mi Perfil</title>
 </head>
 <body>
+    <div class="container">
+        <div class="background">
+            <img src="../images/Pantalla de cambio de contraseña.png" alt="">
+        </div>
+
+        <div  class="profile-card">
+            <div class="icon-back">
+                <a href="catalog.html">
+                    <button class="back-button" ><i class="fa fa-angle-left" aria-hidden="true"></i>  Atrás</button>
+                </a>
+            </div>
+            <h2>Mi Perfil</h2>
+            <div class="profile-img">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+            </div>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Nombre">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Apellidos">
+                </div>
+                <div class="input-campos">
+                    <i class=" Icon fa fa-phone" aria-hidden="true"></i>
+                    <input type="text" placeholder="Teléfono">
+                </div>
+                <div class="input-campos">
+                    <i class=" Icon fa fa-envelope-o" aria-hidden="true"></i>
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-campos">
+                    <i class=" Icon fa fa-unlock-alt" aria-hidden="true"></i>
+                    <input type="password" placeholder="********">
+                    <small><a href="../pages/password.html">Cambiar Contraseña</a></small>
+                </div>
+                
+
+                <button type="button" class="edit-btn">Editar</button>
+
+            </form>
+        </div>
+    </div>
+
+
     
 </body>
 </html>

@@ -1,5 +1,10 @@
+* {
+    font-family: 'General Sans', sans-serif; 
+
+}
+
 body {
-    font-family: 'General Sans', sans-serif;  
+     
     background-color: white;
     display: flex;
     align-items: center;
@@ -36,7 +41,6 @@ body {
     align-items: center;
     
     
-    
 }
 
 .back-button {
@@ -46,6 +50,8 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    display: flex;
+    align-items: start;
 }
 
 .title {
@@ -76,7 +82,7 @@ input {
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 35px;
     cursor: pointer;
 }
 
@@ -84,15 +90,17 @@ input {
     background-color: #2563eb;
 }
 
-button {
-    padding: 10px;
-    background-color: #3b82f6;
-    color: white;
+ button {
+    width: 30%;
+    padding: 6px;
     border: none;
-    border-radius: 5px;
+    border-radius: 35px;
+    background: #1E90FF;
+    color: white;
+    font-size: 14px;
     cursor: pointer;
-    align-items: center ;
-
+    margin-top: 10px;
+    
 }
 
 h2 {
@@ -104,46 +112,54 @@ h2 {
 .imagen-fondo {
     position: absolute;
     width: 50%;
+    background-size: cover;
     
 }
+
+
 
 .back-button {
-    align-items: start;
-    color: #1a1a1a;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
     border: none;
-    cursor: pointer;
-}
-
-.icon-back {
-    
+    background: none;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    top: 15px;
+    left: 15px;
 }
 
 .telephone {
 
-    width: 96%;
+    width: 90%;
     gap: 25px;
+    padding-left: 30px;
     
 }
 
 .email {
-    width: 96%;
+    width: 90%;
     height: 96%;
     margin-bottom: 10px;
     gap: 25px;
+    padding-left: 30px;
 }
 
 .password {
-    width: 96%;
+    width: 90%;
     margin-bottom: 10px;
     gap: 25px;
+    padding-left: 30px;
     
 }
 
 .campos .Icon {
     position: absolute;
-    left: 15px;
-    bottom: 20px;
+    left: 4px;
+    bottom: 15px;
     color: darkgrey;
     padding-left: 10px;
 }
@@ -151,4 +167,6 @@ h2 {
 .campos {
     position: relative;
     margin-bottom: 10px;
-    text-align: left;}
+    text-align: left;
+
+}
