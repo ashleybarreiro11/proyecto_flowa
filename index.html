@@ -6,29 +6,31 @@
 </head>
 <body>
     <header>
-        <div class="logo">Flowa</div>
+        <div class="logo">
+            <img src="Group 122.png">
+        </div>
         <nav>
             <ul>
-                <li><a href="#recetas">Recetas</a></li>
+                <li><a href="pages/catalog.html">Recetas</a></li>
                 <li><a href="#propuesta-valor">Propuesta de Valor</a></li>
                 <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
                 <li><a href="#contacto">Contáctanos</a></li>
             </ul>
         </nav>
         <div class="auth-buttons">
-            <button>Iniciar sesión</button>
-            <button>Regístrate</button>
+            <a href="pages/login.html" class="login-button">Iniciar sesión</a>
+            <a href="pages/signup.html" class="signup-button">Regístrate</a>
         </div>
     </header>
 
     <section class="banner">
         <h1>Cocina con sentido</h1>
         <p>Recetas que fluyen contigo.</p>
-        <button>Descubre recetas ahora</button>
+        <a href="pages/login.html" class="cta-button">Descubre recetas ahora</a>
     </section>
 
     <section id="propuesta-valor">
-        <img src="/images/cocinero.png" alt="">
+        <img src="images/cocinero.png" alt="">
         <div class="left-align">
         <h2>Nuestra Propuesta de Valor</h2>
         <h4>Flowa es una plataforma de recetas que promueve una cocina práctica, deliciosa y con un enfoque sostenible. A través de preparaciones fáciles y 	accesibles, inspira a aprovechar mejor los ingredientes, reducir el desperdicio y descubrir nuevas formas de disfrutar la comida casera. Sin 	complicaciones ni reglas estrictas, Flowa demuestra que es posible cocinar con más conciencia sin sacrificar el sabor ni la creatividad.</h4>
@@ -40,21 +42,21 @@
         <h2>¿Quiénes Somos?</h2>
         <div class="team">
             <div class="member">
-                <img src="/images/ashley.png" class="member-img" alt="Ashley Valentina Barreiro">
+                <img src="images/ashley.png" class="member-img" alt="Ashley Valentina Barreiro">
                 <h3>Ashley Valentina Barreiro</h3>
                 <h3 class="italic">Marketing Specialist y UI Designer</h3>
 		        <h4>Apasionada por el marketing y el diseño de medios interactivos, con especialización en experiencia de usuario. Su enfoque fusiona 			creatividad y estrategia para diseñar experiencias memorables que fortalecen la conexión entre marcas y personas.</h4>
             </div>
             
             <div class="member">
-                <img src="/images/violette.png" class="member-img" alt="Violette Ordoñez Arbelaez">
+                <img src="images/violette.png" class="member-img" alt="Violette Ordoñez Arbelaez">
                 <h3>Violette Ordoñez Arbelaez</h3>
                 <h3 class="italic">Frontend Developer and UX Designer</h3>
 		        <h4>Desarrolladora Frontend y Diseñadora UX con un enfoque en la creación de experiencias digitales intuitivas, accesibles y visualmente 		atractivas. Cuenta con una experiencia amplia en HTML, CSS, JavaScript, Figma y AI. También tiene experiencia en prototipado.</h4>
             </div>
             
             <div class="member">
-                <img src="/images/jose.png" class="member-img" alt="José Miguel Scarpetta">
+                <img src="images/jose.png" class="member-img" alt="José Miguel Scarpetta">
                 <h3>José Miguel Scarpetta</h3>
                 <h3 class="italic">UI Designer</h3>
 		        <h4>Diseñador de interfaces con un enfoque en la armonía entre estética y funcionalidad. Apasionado por la creación de experiencias digitales 		intuitivas que mejoran la interacción entre el usuario y la tecnología. Experto en diseño centrado en el usuario, prototipado y sistemas de diseño.</h4>
@@ -65,17 +67,57 @@
     </section>
 
     <section id="contacto">
-        <h2>Contáctanos</h2>
-        <form>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo electrónico">
-            <textarea placeholder="Escribe tu mensaje..."></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="contacto-container">
+            <div class="formulario">
+                <h2>Contáctanos</h2>
+                <p>Equipo de Desarrollo y Diseño</p>
+                <form>
+                    <input type="text" placeholder="Nombre">
+                    <input type="email" placeholder="Correo electrónico">
+                    <input type="text" placeholder="Asunto">
+                    <textarea placeholder="Escribe tu mensaje..."></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        
+            <div class="imagen_formulario">
+                <img src="images/galletas.png">
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2025 Flowa. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>COMPAÑÍA</h4>
+                <a href="#propuesta-valor">Propuesta de Valor</a>
+                <a href="#quienes-somos">Quiénes Somos</a>
+                <a href="#contacto">Contáctanos</a>
+            </div>
+            <div class="footer-section">
+                <h4>RECETAS</h4>
+                <a href="#">Para el Almuerzo</a>
+                <a href="#">Para la Cena</a>
+                <a href="#">Postres</a>
+            </div>
+            <div class="footer-section">
+                <h4>MÁS EN FLOWA</h4>
+                <a href="#">Reseñas Destacadas</a>
+            </div>
+            <div class="footer-section">
+                <h4>SÍGUENOS</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>© 2025 Flowa</p>
+        </div>
     </footer>
+
 </body>
 </html>
