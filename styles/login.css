@@ -110,8 +110,15 @@ h1 {
     font-size: 16px;
     font-weight: bold;
     display: flex;
-    align-items: start;
+    align-items: center;
+    font-kerning: auto;
+
     
+}
+
+.icon-back a {
+    text-decoration: none;
+
 }
 .campos input {
 
