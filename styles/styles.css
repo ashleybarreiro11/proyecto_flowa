@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 header {
@@ -32,6 +33,12 @@ header nav a {
     text-decoration: none;
     color: #333;
     font-size: 15;
+}
+
+.divider {
+    width: 95%;
+    border-top: 1px solid #d9d9d9;
+    margin: 20px auto;
 }
 
 .auth-buttons .login-button {
@@ -74,9 +81,6 @@ h4{
 }
 
 .banner {
-    background-image: url(../images/banner1.png);
-    background-size: cover;
-    background-position: center;
     color: white;
     width: 100%;
     height: 550px;
@@ -84,6 +88,34 @@ h4{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.banner-images {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth; 
+    animation: autoscroll 10s infinite ;
+}
+
+.banner-images > * {
+    flex: 0 0 100%; 
+    scroll-snap-align: start; 
+}
+
+@keyframes autoscroll {
+    0%, 33% {
+        transform: translateX(0);
+    }
+    34%, 66% {
+        transform: translateX(-100%);
+    }
+    67%, 100% {
+        transform: translateX(-200%);
+    }
 }
 
 .banner h1 {
@@ -111,7 +143,6 @@ h4{
 }
 
 section {
-    padding: 40px;
     text-align: center;
 }
 
@@ -128,6 +159,7 @@ section {
 }
 
 #propuesta-valor {
+    padding-top: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
