@@ -34,6 +34,10 @@ header .profile {
     align-items: center;
 }
 
+header .profile:hover {
+    background-color: #21618c;
+}
+
 main {
     margin-top: 20px;
     margin-left: 20px;

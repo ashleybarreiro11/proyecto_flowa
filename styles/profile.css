@@ -156,7 +156,7 @@ h2 {
 }
 
 .edit-btn:hover {
-    opacity: 0.5;
+    background-color: #21618c;
 }
 
 .input-campos .Icon {

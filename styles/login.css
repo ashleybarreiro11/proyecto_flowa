@@ -82,7 +82,7 @@ body {
 }
 
 .btn-ingresar:hover {
-    opacity: 0.5;
+    background-color: #21618c;
 }
 
 p {

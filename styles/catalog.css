@@ -72,6 +72,10 @@ body{
     align-items: center;
 }
 
+.favorites:hover {
+    background-color: #1e8449;
+}
+
 .favorites .fa{
     color: white;
     font-weight: bold;
@@ -98,6 +102,10 @@ body{
     height: 30px;
     width: 30px;
     text-align: center;
+}
+
+.profile:hover{
+    background-color: #21618c;
 }
 
 .title{
