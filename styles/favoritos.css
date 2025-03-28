@@ -51,6 +51,10 @@ body{
     text-align: center;
 }
 
+.profile:hover {
+    background-color: #21618c;
+}
+
 .return {
     display: flex;
     justify-content: flex-end;
