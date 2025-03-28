@@ -101,6 +101,7 @@ h1 {
 }
 
 .back-button {
+    margin-top: 60px;
     top: 15px;
     left: 30px;
     border: none;
@@ -112,8 +113,6 @@ h1 {
     display: flex;
     align-items: center;
     font-kerning: auto;
-
-    
 }
 
 .icon-back a {
