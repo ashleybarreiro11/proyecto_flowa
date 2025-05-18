@@ -33,34 +33,34 @@
     
             <form>
                 <div class="input-group">
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Apellido" >
+                    <input type="text" placeholder="Nombre" id = "signup_nombre">
+                    <input type="text" placeholder="Apellido" id = "signup_apellido">
                 </div>
                 <div class="input-group">
-                    <input type="text" placeholder="Identificación">
-                    <input type="text" placeholder="Edad">
+                    <input type="text" placeholder="Identificación" id = "signup_identificacion">
+                    <input type="text" placeholder="Edad" id = "signup_edad">
                 </div>
                <div class="final-input">
                   <div class="campos">
                     <i class=" Icon fa fa-phone" aria-hidden="true"></i>
-                    <input class="telephone" type="text" placeholder="Teléfono">
+                    <input class="telephone" type="text" placeholder="Teléfono" id = "signup_telefono">
                  </div>
                 
                  <div class="campos">
                     <i class=" Icon fa fa-envelope-o" aria-hidden="true"></i>
-                    <input class="email" type="email" placeholder="Correo electrónico"  class="input-field" required>
+                    <input class="email" type="email" placeholder="Correo electrónico"  class="input-field" required id = "signup_email">
                  </div>
                 
                   <div class="campos">
                     <i class=" Icon fa fa-unlock-alt" aria-hidden="true"></i>
-                    <input class="password" type="password" placeholder="Contraseña">
+                    <input class="password" type="password" placeholder="Contraseña" id = "signup_password">
                   </div>
                </div>
               
             </form>
-            <a href="login.html">
-                <button class="submit-button">Continuar</button>
-             </a>
+            <!--<a href="login.html">
+             </a>-->
+              <button class="submit-button" onclick="createUser()">Continuar</button>
         </div>
     </div>
    
@@ -68,12 +68,6 @@
 
 
    </div>
-
-    
-
-   
-    
-
-    
+<script src="../js/signup.js"></script>   
 </body>
 </html>

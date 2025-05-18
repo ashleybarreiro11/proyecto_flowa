@@ -36,21 +36,22 @@
 
             <div class="campos">
                 <i class=" Icon fa fa-envelope-o" aria-hidden="true"></i>
-                <input type="email" placeholder="Correo electrónico"  class="input-field" required>
+                <input type="email" placeholder="Correo electrónico"  class="input-field" required id = "input_email">
             </div>
 
             <div class="campos">
                 <i class=" Icon fa fa-unlock-alt" aria-hidden="true"></i>
-                <input type="password" placeholder="Contraseña" class="input-field" required>
+                <input type="password" placeholder="Contraseña" class="input-field" required id = "input_password">
             </div>
         <br>
-       <a href="catalog.html">
-        <button class="btn-ingresar">Ingresar</button>
-       </a>
+       <!--<a href="catalog.html">
+       </a> -->
+       <button class="btn-ingresar" id = "button_ingresar" onclick="verification()">Ingresar</button>
        <br>
        <p> ¿No tienes cuenta? <a href="signup.html">
         ¡Registrate!</p>
        </a>
     </div>
+<script src="../js/login.js"></script>
 </body>
 </html>
