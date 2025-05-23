@@ -31,33 +31,33 @@
             </div>
             <form>
                 <div class="input-group">
-                    <input type="text" placeholder="Nombre" disabled>
+                    <input type="text" placeholder="Nombre" disabled id = "nombre-profile">
                 </div>
                 <div class="input-group">
-                    <input type="text" placeholder="Apellidos" disabled>
+                    <input type="text" placeholder="Apellidos" disabled id = "apellido-profile">
                 </div>
                 <div class="input-campos">
                     <i class=" Icon fa fa-phone" aria-hidden="true"></i>
-                    <input type="text" placeholder="Teléfono" disabled>
+                    <input type="text" placeholder="Teléfono" disabled id = "telefono-profile">
                 </div>
                 <div class="input-campos">
                     <i class=" Icon fa fa-envelope-o" aria-hidden="true"></i>
-                    <input type="email" placeholder="Email" disabled>
+                    <input type="email" placeholder="Email" disabled id = "email-profile">
                 </div>
                 <div class="input-campos">
                     <i class=" Icon fa fa-unlock-alt" aria-hidden="true"></i>
-                    <input type="password" placeholder="********" disabled>
+                    <input type="password" placeholder="********" disabled id = "password-profile">
                     <small><a href="../pages/password.html">Cambiar Contraseña</a></small>
                 </div>
                 
 
-                <button type="button" class="edit-btn">Editar</button>
+                <button type="button" class="edit-btn" onclick = "edit()">Editar</button>
 
             </form>
         </div>
     </div>
 
 
-    
+    <script src = "../js/profile.js"></script>
 </body>
 </html>
