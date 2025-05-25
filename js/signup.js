@@ -6,7 +6,10 @@ const signUpTelefono = document.getElementById("signup_telefono")
 const signUpEmail = document.getElementById("signup_email")
 const signUpPassword = document.getElementById("signup_password")
 
-let users = JSON.parse(localStorage.getItem("userRegistered")) || []
+let user =[JSON.parse(localStorage.getItem("userRegistered")) ] ||  []
+
+const userArray = []
+console.log(user);
 
 function createUser() {
     const nombreInput = signUpNombre.value  
@@ -19,7 +22,7 @@ function createUser() {
 
     //poner los errores
 
-    users.push({
+    user.push({
         nombre:nombreInput,
         apellido:apellidoInput,
         identificacion:identificacionInput,
@@ -29,8 +32,8 @@ function createUser() {
         password: passwordInput,
         favoritos: [ { }] 
     })
-    const stringSignup = JSON.stringify(users)
+    const stringSignup = JSON.stringify(user)
     localStorage.setItem("userRegistered",stringSignup)
-    console.log(users);
+    console.log(user);
     window.location.href = "../pages/login.html"
 }

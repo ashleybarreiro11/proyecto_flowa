@@ -1,8 +1,9 @@
+
 const user = localStorage.getItem("logged-user")
-const userObj = JSON.parse(user)
+ const userObj = JSON.parse(user)
 const favoritesContainer = document.getElementById("favorites-container")
  function createRecipes(user){
-    const dataUser = user[0].favoritos
+    const dataUser = user.favoritos
     console.log(dataUser)
     dataUser.forEach(item => {
         const newRecipe = new recipecard(
