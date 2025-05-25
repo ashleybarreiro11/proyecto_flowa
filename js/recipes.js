@@ -16,7 +16,7 @@ class recipecard{
     card(){
         return `            
         <div class="recipe-card1">
-                <button class="favorite-btn">
+                <button onclick="toFavorites(${this.id})" class="favorite-btn"> 
                     <i class="fa fa-heart" aria-hidden="true"></i>
                 </button>
                 <img src="${this.imagen}" alt="Chocolate Chips Cookie" onclick="detail(${this.id})">
