@@ -22,9 +22,8 @@ class recipecard{
                 <img src="${this.imagen}" alt="Chocolate Chips Cookie" onclick="detail(${this.id})">
                 <h2 class="productname">${this.name}</h2>
                 <p>Preparation time: ${this.prepTimeMinutes}</p>
-                <p>Cuisine: ${this.cuisine}</p>
                 <p>Difficulty: ${this.difficulty}</p>
-
+                <p>Cuisine: ${this.cuisine}</p>
             </div>`
     }
     detailRecipes(){
