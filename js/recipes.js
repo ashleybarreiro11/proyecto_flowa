@@ -29,8 +29,8 @@ class recipecard{
     detailRecipes(){
         imageDetail.src = `${this.imagen}`
         nameDetail.innerHTML = this.name
-        prepTimeMinutesDetail.innerHTML = this.prepTimeMinutes
-        ingredientsDetail.innerHTML = this.ingredients
+        instructionsDetail.innerHTML = this.instructions
+
     }
-}
+} 
 

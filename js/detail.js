@@ -634,6 +634,7 @@ const data = [{
 
 const imageDetail = document.getElementById("image_detail")
 const nameDetail = document.getElementById("name_detail")
+const instructionsDetail = document.getElementById("instructions-container")
 const params = new URLSearchParams(window.location.search)
 const id = params.get("id")
 
