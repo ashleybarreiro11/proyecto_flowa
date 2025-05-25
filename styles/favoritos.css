@@ -252,3 +252,8 @@ h4{
     font-size: 20px;
     font-weight: normal;
 }
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
