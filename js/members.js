@@ -6,17 +6,17 @@ const membersData = [{
 
 },
 {
-    nombre: "valen",
-    img: "asiojdioasjd",
-    titulo: "soy genial",
-    descripcion:"aosdjaosidj"
+    nombre: "Violette Ordoñez Arbelaez",
+    img: "../images/violette.png",
+    titulo: "Frontend Developer and UX Designer",
+    descripcion:"Desarrolladora Frontend y Diseñadora UX con un enfoque en la creación de experiencias digitales intuitivas, accesibles y visualmente 		atractivas. Cuenta con una experiencia amplia en HTML, CSS, JavaScript, Figma y AI. También tiene experiencia en prototipado."
 
 },
 {
-    nombre: "valen",
-    img: "asiojdioasjd",
-    titulo: "soy genial",
-    descripcion:"aosdjaosidj"
+    nombre: "José Miguel Scarpetta",
+    img: "../images/jose.png",
+    titulo: "UI Designer",
+    descripcion:"Diseñador de interfaces con un enfoque en la armonía entre estética y funcionalidad. Apasionado por la creación de experiencias digitales 		intuitivas que mejoran la interacción entre el usuario y la tecnología. Experto en diseño centrado en el usuario, prototipado y sistemas de diseño."
 
 }]
 class memberobject{
