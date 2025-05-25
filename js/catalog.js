@@ -663,5 +663,8 @@ function detail(id){
     
 }
 function toFavorites(id){
-const localUser = localStorage.getItem(logged-user)
+const localUser = localStorage.getItem("logged-user")
+const localUserJson = JSON.parse(localUser)
+console.log(localUserJson.favorites,id); 
+
 }
