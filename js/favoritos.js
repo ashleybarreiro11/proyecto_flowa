@@ -27,3 +27,9 @@ const favoritesContainer = document.getElementById("favorites-container")
 } 
 
 createRecipes(userObj)
+
+function detail(id){
+    window.location.href = `../pages/detail.html?id=${id}`
+    console.log(id);
+    
+}
