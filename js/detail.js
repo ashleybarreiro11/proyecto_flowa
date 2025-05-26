@@ -632,9 +632,18 @@ const data = [{
 ]
 }]
 
-const imageDetail = document.getElementById("image_detail")
-const nameDetail = document.getElementById("name_detail")
+const imageDetail = document.getElementById("image-detail")
+const nameDetail = document.getElementById("name-detail")
+const prepTimeDetail = document.getElementById("prep-time-detail")
+const cookTimeDetail = document.getElementById("cook-time-detail")
+const servingsDetail = document.getElementById("servings-detail")
+const difficultyDetail = document.getElementById("difficulty-detail")
+const cuisineDetail = document.getElementById("cuisine-detail")
+const caloriesDetail = document.getElementById("calories-detail")
+const tagsDetail = document.getElementById("tags-detail")
+const ingredientsDetail = document.getElementById("ingredients-container")
 const instructionsDetail = document.getElementById("instructions-container")
+
 const params = new URLSearchParams(window.location.search)
 const id = params.get("id")
 
@@ -649,6 +658,7 @@ function createDetail(id){
             recipe.prepTimeMinutes,
             recipe.cookTimeMinutes,
             recipe.caloriesPerServing,
+            recipe.servings,
             recipe.difficulty,
             recipe.cuisine,
             recipe.tags 

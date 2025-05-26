@@ -1,14 +1,15 @@
 class recipecard{
-    constructor(id,name,imagen,ingredients,instrucctions,prepTimeMinutes,cookTimeMinutes,caloriesPerServing,difficulty,cuisine,tags){
+    constructor(id,name,image,ingredients,instructions,prepTimeMinutes,cookTimeMinutes,caloriesPerServing,servings,difficulty,cuisine,tags){
        
         this.id = id
         this.name = name 
-        this.imagen = imagen
+        this.image = image
         this.ingredients = ingredients
-        this.instructions = instrucctions
+        this.instructions = instructions
         this.prepTimeMinutes = prepTimeMinutes
         this.cookTimeMinutes = cookTimeMinutes
         this.caloriesPerServing = caloriesPerServing
+        this.servings = servings
         this.difficulty = difficulty
         this.cuisine = cuisine
         this.tags = tags
@@ -19,7 +20,7 @@ class recipecard{
                 <button onclick="toFavorites(${this.id})" class="favorite-btn"> 
                     <i class="fa fa-heart" aria-hidden="true"></i>
                 </button>
-                <img src="${this.imagen}" alt="Chocolate Chips Cookie" onclick="detail(${this.id})">
+                <img src="${this.image}" alt=" " onclick="detail(${this.id})">
                 <h2 class="productname">${this.name}</h2>
                 <p>Preparation time: ${this.prepTimeMinutes}</p>
                 <p>Difficulty: ${this.difficulty}</p>
@@ -27,10 +28,17 @@ class recipecard{
             </div>`
     }
     detailRecipes(){
-        imageDetail.src = `${this.imagen}`
+        imageDetail.src = `${this.image}`
         nameDetail.innerHTML = this.name
-        instructionsDetail.innerHTML = this.instructions
-
+        prepTimeDetail.innerHTML = this.prepTimeMinutes
+        cookTimeDetail.innerHTML = this.cookTimeMinutes 
+        servingsDetail.innerHTML = this.servings
+        difficultyDetail.innerHTML = this.difficulty
+        cuisineDetail.innerHTML = this.cuisine
+        caloriesDetail.innerHTML = this.caloriesPerServing
+        tagsDetail.innerHTML = this.tags
+        ingredientsDetail.innerHTML = `<ul>${this.ingredients.map(element => `<li>${element}</li>`).join('')}</ul>`
+        instructionsDetail.innerHTML = `<ol>${this.instructions.map(element => `<li>${element}</li>`).join('')}</ol>`
     }
 } 
 

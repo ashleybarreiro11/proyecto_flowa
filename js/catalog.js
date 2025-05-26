@@ -646,6 +646,7 @@ function createRecipes(dummy){
             item.prepTimeMinutes,
             item.cookTimeMinutes,
             item.caloriesPerServing,
+            item.servings,
             item.difficulty,
             item.cuisine,
             item.tags
