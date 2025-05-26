@@ -97,6 +97,11 @@ h1 {
     margin-top: 40px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .img-logo{
     position: absolute;
     top: 50px;
