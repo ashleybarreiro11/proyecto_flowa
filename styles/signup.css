@@ -74,7 +74,8 @@ body {
 .title {
     font-size: 26px;
     font-weight: bold;
-    margin-bottom: 45px;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 .input-group {
@@ -94,9 +95,10 @@ input {
 }
 
 .submit-button {
+    width: 100px;
     background-color: #007AFF;
     color: white;
-    padding: 15px;
+    padding: 8px;
     border: none;
     border-radius: 35px;
     cursor: pointer;
@@ -106,7 +108,7 @@ input {
     background-color: #21618c;
 }
 
- button {
+button {
     padding: 10px;
     border: none;
     border-radius: 35px;
@@ -123,11 +125,6 @@ h2 {
     font-weight: bold;
     margin-bottom: 10px;
 }
-
-
-
-
-
 
 .telephone {
 
