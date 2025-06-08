@@ -6,10 +6,16 @@ const signUpTelefono = document.getElementById("signup_telefono")
 const signUpEmail = document.getElementById("signup_email")
 const signUpPassword = document.getElementById("signup_password")
 
-let user =[JSON.parse(localStorage.getItem("userRegistered")) ] ||  []
-
-const userArray = []
+let user =[]
 console.log(user);
+
+function handleErrors() {
+    if (signUpNombre.value === ""){
+        alert("Campo nombre incompleto")
+    } else if (signUpApellido.value === ""){
+        alert("Campo apellido incompleto")
+    } //completar los que faltan 
+}
 
 function createUser() {
     const nombreInput = signUpNombre.value  
@@ -19,9 +25,11 @@ function createUser() {
     const telefonoInput = signUpTelefono.value
     const emailInput = signUpEmail.value  
     const passwordInput = signUpPassword.value  
-
-    //poner los errores
-
+    
+    const usersLocal = localStorage.getItem("userRegistered") 
+    const parseUsers = JSON.parse(usersLocal)
+    console.log(parseUsers);
+    
     user.push({
         nombre:nombreInput,
         apellido:apellidoInput,
@@ -31,9 +39,9 @@ function createUser() {
         email:emailInput, 
         password: passwordInput,
         favoritos: [ { }] 
-    })
+    },...parseUsers)
     const stringSignup = JSON.stringify(user)
     localStorage.setItem("userRegistered",stringSignup)
     console.log(user);
-    window.location.href = "../pages/login.html"
 }
+
