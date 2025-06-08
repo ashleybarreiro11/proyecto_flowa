@@ -31,19 +31,27 @@ function logOut() {
 }
 
 function confirmation() {
-    const nombreValue = nombreProfile.value  
-    const apellidoValue = apellidoProfile.value 
-    const telefonoValue = telefonoProfile.value
-    const emailValue = emailProfile.value  
-
-    const userToEdit = parseRegistered.find(item =>
-        item.nombre === loggedUserJSON.nombre
-    )
-    console.log(userToEdit);
+    const nombreValue = nombreProfile.value  || nombreProfile.placeholder
+    const apellidoValue = apellidoProfile.value || apellidoProfile.placeholder
+    const telefonoValue = telefonoProfile.value || telefonoProfile.placeholder
+    const emailValue = emailProfile.value || emailProfile.placeholder
     
-    userToEdit.nombre = nombreValue
-    userToEdit.apellido = apellidoValue
-    userToEdit.telefono = telefonoValue
-    userToEdit.email = emailValue
-    localStorage.setItem("usersRegistered", userToEdit)
+    loggedUserJSON.nombre = nombreValue
+    loggedUserJSON.apellido = apellidoValue
+    loggedUserJSON.telefono = telefonoValue
+    loggedUserJSON.email = emailValue
+    localStorage.setItem("logged-user", JSON.stringify(loggedUserJSON))
+
+    //findIndex es para buscar según un parámetro específico, nos devuelve la posición que tiene en el array
+    const userIndex = parseRegistered.findIndex(item => item.email === loggedUserJSON.email)
+    parseRegistered [userIndex] = {
+        ...parseRegistered [userIndex], ...loggedUserJSON
+    }
+    localStorage.setItem("userRegistered", JSON.stringify(parseRegistered))
+
+    confirmationButton.classList.add("disabled")
+    nombreProfile.disabled = true
+    apellidoProfile.disabled = true
+    telefonoProfile.disabled = true
+    emailProfile.disabled = true
 }
