@@ -55,3 +55,7 @@ function confirmation() {
     telefonoProfile.disabled = true
     emailProfile.disabled = true
 }
+
+function changePassword() {
+    passwordProfile
+}
