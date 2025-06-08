@@ -1,6 +1,6 @@
 
-const user = localStorage.getItem("logged-user")
- const userObj = JSON.parse(user)
+const user = localStorage.getItem("logged-user") //string
+ const userObj = JSON.parse(user) //JSON (objeto)
 const favoritesContainer = document.getElementById("favorites-container")
  function createRecipes(user){
     const dataUser = user.favoritos

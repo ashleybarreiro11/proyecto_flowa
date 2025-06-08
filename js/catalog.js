@@ -631,7 +631,7 @@ const data = [{
     },
 ]
 }]
-
+//for each (por cada) objeto que está dentro de data dummy, crear una tarjeta
 const recipesContainer = document.getElementById("card-container")
 function createRecipes(dummy){
     const dataDummy = dummy[0].recipes

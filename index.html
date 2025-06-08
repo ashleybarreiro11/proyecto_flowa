@@ -64,11 +64,11 @@
                 <h2>Contáctanos</h2>
                 <p>Equipo de Desarrollo y Diseño</p>
                 <form>
-                    <input type="text" placeholder="Nombre">
-                    <input type="email" placeholder="Correo electrónico">
-                    <input type="text" placeholder="Asunto">
-                    <textarea placeholder="Escribe tu mensaje..."></textarea>
-                    <button type="submit">Enviar</button>
+                    <input type="text" placeholder="Nombre" id = "contact-name">
+                    <input type="email" placeholder="Correo electrónico" id = "contact-email">
+                    <input type="text" placeholder="Asunto" id = "contact-subject">
+                    <textarea placeholder="Escribe tu mensaje..." id = "contact-message"></textarea>
+                    <button type="submit" onclick = "contactInfo()">Enviar</button>
                 </form>
             </div>
         
@@ -111,5 +111,6 @@
         </div>
     </footer>
 <script src = "js/members.js"></script>
+<script src = "js/contact.js"></script>
 </body>
 </html>
