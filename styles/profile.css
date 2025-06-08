@@ -166,3 +166,7 @@ h2 {
     left: 12px;
 }
 
+.disabled {
+    display:none;
+}
+
