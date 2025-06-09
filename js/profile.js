@@ -64,6 +64,11 @@ function changePassword() {
     else if (newpassword.value!== confirmpassword.value) {alert("Las contraseñas no coinciden")}
     else {loggedUserJSON.password = newpassword.value
         localStorage.setItem("logged-user", JSON.stringify(loggedUserJSON))
+         const userIndex = parseRegistered.findIndex(item => item.email === loggedUserJSON.email)
+    parseRegistered [userIndex] = {
+        ...parseRegistered [userIndex], ...loggedUserJSON
+    }
+    localStorage.setItem("userRegistered", JSON.stringify(parseRegistered))
         window.location.href = "../pages/profile.html"
     }
 }
