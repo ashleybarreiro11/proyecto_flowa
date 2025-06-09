@@ -57,5 +57,13 @@ function confirmation() {
 }
 
 function changePassword() {
-    passwordProfile
+    const oldpassword = document.getElementById("contraseña-actual")
+    const newpassword = document.getElementById("contraseña-nueva")
+    const confirmpassword = document.getElementById("confirmar-contraseña")
+    if (oldpassword.value!== loggedUserJSON.password) {alert("Contraseña Incorrecta")}
+    else if (newpassword.value!== confirmpassword.value) {alert("Las contraseñas no coinciden")}
+    else {loggedUserJSON.password = newpassword.value
+        localStorage.setItem("logged-user", JSON.stringify(loggedUserJSON))
+        window.location.href = "../pages/profile.html"
+    }
 }
