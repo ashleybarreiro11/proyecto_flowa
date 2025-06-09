@@ -40,8 +40,11 @@ function detail(id){
     
 }
 
-function toFavorites(id){
-const localUser = localStorage.getItem("logged-user")
-const localUserJson = JSON.parse(localUser)
-console.log(localUserJson.favorites,id); 
+async function toFavorites(id){
+  const data = await food()
+  const localUser = localStorage.getItem("logged-user")
+  const localUserJson = JSON.parse(localUser)
+  const favoriteRecipe = data.recipes.find(item => item.id === id)
+  localUserJson.favoritos = favoriteRecipe
+  localStorage.setItem("logged-user", JSON.stringify(localUserJson))
 }
