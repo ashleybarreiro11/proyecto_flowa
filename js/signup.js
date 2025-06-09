@@ -30,7 +30,7 @@ function createUser() {
         telefono: telefonoInput,
         email:emailInput, 
         password: passwordInput,
-        favoritos: [ { }] 
+        favoritos: [] 
     },...parseUsers)
     const stringSignup = JSON.stringify(user)
     localStorage.setItem("userRegistered",stringSignup)
