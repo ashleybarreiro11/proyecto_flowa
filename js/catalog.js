@@ -52,7 +52,7 @@ const localUserJson = JSON.parse(localUser)
 console.log(localUserJson.favorites,id); 
 }
 
-
+// Espera el resultado para poder ejecutar la función
 async function searchBar() {
     recipesContainer.innerHTML = ""
     const dataSearch = await foodSearch()
@@ -74,5 +74,3 @@ async function searchBar() {
         recipesContainer.innerHTML += newRecipe.card();
     });
 }
-
-inputsearchBar.addEventListener("keypress", searchBar())
