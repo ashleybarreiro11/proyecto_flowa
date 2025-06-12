@@ -50,27 +50,9 @@ async function toFavorites(id){
   const RegisteredUser = localUser.getItem("userRegistered")
   const RegisteredUserJson = JSON.parse(RegisteredUser)
    const userIndex = RegisteredUserJson.findIndex(item => item.email === localUserJson.email)
-    RegisteredUserJson [userIndex] = {
-        ...localUserJson
-    }
-    localStorage.setItem("userRegistered", JSON.stringify(RegisteredUserJson))
-}
-
-
-async function toFavorites(id){
-  const data = await food()
-  const localUser = localStorage.getItem("logged-user")
-  const localUserJson = JSON.parse(localUser)
-  const favoriteRecipe = data.recipes.find(item => item.id === id)
-  localUserJson.favoritos.push(favoriteRecipe)
-  localStorage.setItem("logged-user", JSON.stringify(localUserJson))
-  const RegisteredUser = localUser.getItem("userRegistered")
-  const RegisteredUserJson = JSON.parse(RegisteredUser)
-   const userIndex = RegisteredUserJson.findIndex(item => item.email === localUserJson.email)
     RegisteredUserJson[userIndex] = {
       ...RegisteredUserJson[userIndex],
       favoritos: localUserJson.favoritos
     }
     localStorage.setItem("userRegistered", JSON.stringify(RegisteredUserJson))
 }
-
