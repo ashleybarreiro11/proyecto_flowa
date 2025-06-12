@@ -21,7 +21,7 @@ class recipecard{
                     <i class="fa fa-heart" aria-hidden="true"></i>
                 </button>
                 <img src="${this.image}" alt=" " onclick="detail(${this.id})">
-                <h2 class="productname">${this.name}</h2>
+                <h2 class="productname" onclick="detail(${this.id})">${this.name}</h2>
                 <p>Preparation time: ${this.prepTimeMinutes}</p>
                 <p>Difficulty: ${this.difficulty}</p>
                 <p>Cuisine: ${this.cuisine}</p>
