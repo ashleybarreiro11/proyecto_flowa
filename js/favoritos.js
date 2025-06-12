@@ -33,3 +33,19 @@ function detail(id){
     console.log(id);
     
 }
+
+async function deleteFavorites(id){
+  const localUser = localStorage.getItem("logged-user")
+  const localUserJson = JSON.parse(localUser)
+  const favoriteRecipe = localUserJson.favoritos.findIndex(item => item.id === id)
+  localUserJson.favoritos.splice(favoriteRecipe,1)
+  localStorage.setItem("logged-user", JSON.stringify(localUserJson))
+  const RegisteredUser = localStorage.getItem("userRegistered")
+  const RegisteredUserJson = JSON.parse(RegisteredUser)
+   const userIndex = RegisteredUserJson.findIndex(item => item.email === localUserJson.email)
+    RegisteredUserJson[userIndex] = {
+      ...RegisteredUserJson[userIndex],
+      favoritos: localUserJson.favoritos
+    }
+    localStorage.setItem("userRegistered", JSON.stringify(RegisteredUserJson))
+}
