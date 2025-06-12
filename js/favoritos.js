@@ -20,7 +20,8 @@ const favoritesContainer = document.getElementById("favorites-container")
             item.cuisine,
             item.tags
         )
-        favoritesContainer.innerHTML += newRecipe.card()
+        
+        favoritesContainer.innerHTML += newRecipe.cardfavorites()
 
         
     });
