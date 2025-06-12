@@ -40,17 +40,5 @@ class recipecard{
         ingredientsDetail.innerHTML = `<ul>${this.ingredients.map(element => `<li>${element}</li>`).join('')}</ul>`
         instructionsDetail.innerHTML = `<ol>${this.instructions.map(element => `<li>${element}</li>`).join('')}</ol>`
     }
-     cardfavorites(){
-        return `            
-        <div class="recipe-card1">
-                <button onclick="deleteFavorites(${this.id})" class="favorite-btn"> 
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                </button>
-                <img src="${this.image}" alt=" " onclick="detail(${this.id})">
-                <h2 class="productname">${this.name}</h2>
-                <p>Preparation time: ${this.prepTimeMinutes}</p>
-                <p>Difficulty: ${this.difficulty}</p>
-                <p>Cuisine: ${this.cuisine}</p>
-            </div>`
 } 
-}
+
