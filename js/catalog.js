@@ -14,6 +14,10 @@ async function foodSearch (){
 const data = food()
 console.log(data);
 
+const loggedUser = localStorage.getItem("logged-user")
+const catalogTitle = document.getElementById("title-catalog")
+catalogTitle.innerText = `Descubre tus recetas, ${JSON.parse(loggedUser).nombre}`
+
 const recipesContainer = document.getElementById("card-container")
 async function createRecipes(dummy){
     const dataDummy = dummy.recipes
