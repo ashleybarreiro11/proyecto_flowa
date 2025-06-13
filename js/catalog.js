@@ -40,6 +40,7 @@ function detail(id){
     
 }
 
+
 async function toFavorites(id){
   const data = await food()
   const localUser = localStorage.getItem("logged-user")
@@ -50,8 +51,9 @@ async function toFavorites(id){
   const RegisteredUser = localUser.getItem("userRegistered")
   const RegisteredUserJson = JSON.parse(RegisteredUser)
    const userIndex = RegisteredUserJson.findIndex(item => item.email === localUserJson.email)
-    RegisteredUserJson [userIndex] = {
-        ...localUserJson
+    RegisteredUserJson[userIndex] = {
+      ...RegisteredUserJson[userIndex],
+      favoritos: localUserJson.favoritos
     }
     localStorage.setItem("userRegistered", JSON.stringify(RegisteredUserJson))
 }
