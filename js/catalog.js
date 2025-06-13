@@ -76,3 +76,82 @@ async function toFavorites(id){
 }
 
 
+//Categorias
+
+
+
+async function obtenerRecetas() {
+    const respuesta = await fetch("https://dummyjson.com/recipes");
+    const datos = await respuesta.json();
+    return datos.recipes;
+}
+
+function mostrarRecetas(recetas) {
+    contenedorRecetas.innerHTML = "";
+    contadorResultados.textContent = `${recetas.length} Resultado${recetas.length !== 1 ? "s" : ""}`;
+
+    recetas.forEach((receta) => {
+        const tarjeta = new recipecard(
+            receta.id,
+            receta.name,
+            receta.image,
+            receta.ingredients,
+            receta.instructions,
+            receta.prepTimeMinutes,
+            receta.cookTimeMinutes,
+            receta.caloriesPerServing,
+            receta.servings,
+            receta.difficulty,
+            receta.cuisine,
+            receta.tags
+        );
+        contenedorRecetas.innerHTML += tarjeta.card();
+    });
+}
+
+async function cargarCategoriasCuisine() {
+    const recetas = await obtenerRecetas();
+    const cocinasUnicas = new Set();
+
+    recetas.forEach((receta) => {
+        if (receta.cuisine) {
+            cocinasUnicas.add(receta.cuisine.toLowerCase());
+        }
+    });
+
+    cocinasUnicas.forEach((cocina) => {
+        const opcion = document.createElement("option");
+        opcion.value = cocina;
+        opcion.textContent = cocina.charAt(0).toUpperCase() + cocina.slice(1);
+        filtroCategorias.appendChild(opcion);
+    });
+}
+
+filtroCategorias.addEventListener("change", async () => {
+    const seleccion = filtroCategorias.value;
+    const recetas = await obtenerRecetas();
+
+    const filtradas = seleccion === ""
+        ? recetas
+        : recetas.filter((receta) => receta.cuisine.toLowerCase() === seleccion);
+
+    mostrarRecetas(filtradas);
+});
+
+async function searchBar() {
+    const texto = barraBusqueda.value.toLowerCase();
+    const recetas = await obtenerRecetas();
+
+    const filtradas = recetas.filter((receta) =>
+        receta.name.toLowerCase().includes(texto)
+    );
+
+    
+    mostrarRecetas(filtradas);
+}
+
+(async () => {
+    const recetas = await obtenerRecetas();
+    mostrarRecetas(recetas);
+    await cargarCategoriasCuisine();
+})(); 
