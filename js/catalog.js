@@ -5,12 +5,14 @@ async function food (){
     console.log(jsonfood); 
     return jsonfood
 }
+
 async function foodSearch (){
     const searchGet = await fetch(`https://dummyjson.com/recipes/search?q=${inputsearchBar.value}`)
     const parsefood = await searchGet.json()
     console.log(parsefood)
     return parsefood
 }
+
 const data = food()
 console.log(data);
 
@@ -46,12 +48,12 @@ function detail(id){
     
 }
 
+
 function toFavorites(id){
 const localUser = localStorage.getItem("logged-user")
 const localUserJson = JSON.parse(localUser)
 console.log(localUserJson.favorites,id); 
 }
-
 
 async function searchBar() {
     recipesContainer.innerHTML = ""
