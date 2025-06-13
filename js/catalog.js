@@ -1,16 +1,21 @@
-const inputsearchBar = document.getElementById("search-bar")
+const contenedorRecetas = document.getElementById("card-container");
+const filtroCategorias = document.getElementById("filtro-tags"); // Reutilizamos el <select>
+const contadorResultados = document.querySelector(".filter-bar span");
+const barraBusqueda = document.getElementById("search-bar");
 async function food (){
     const Foodget = await fetch('https://dummyjson.com/recipes')
     const jsonfood = await Foodget.json()
     console.log(jsonfood); 
     return jsonfood
 }
+
 async function foodSearch (){
-    const searchGet = await fetch(`https://dummyjson.com/recipes/search?q=${inputsearchBar.value}`)
+    const searchGet = await fetch(`https://dummyjson.com/recipes/search?q=${barraBusqueda.value}`)
     const parsefood = await searchGet.json()
     console.log(parsefood)
     return parsefood
 }
+
 const data = food()
 console.log(data);
 
@@ -50,12 +55,12 @@ function detail(id){
     
 }
 
+
 function toFavorites(id){
 const localUser = localStorage.getItem("logged-user")
 const localUserJson = JSON.parse(localUser)
 console.log(localUserJson.favorites,id); 
 }
-
 
 async function searchBar() {
     recipesContainer.innerHTML = ""
@@ -79,14 +84,10 @@ async function searchBar() {
     });
 }
 
-inputsearchBar.addEventListener("keypress", searchBar())
 
 //Categorias
 
-const contenedorRecetas = document.getElementById("card-container");
-const filtroCategorias = document.getElementById("filtro-tags"); // Reutilizamos el <select>
-const barraBusqueda = document.getElementById("search-bar");
-const contadorResultados = document.querySelector(".filter-bar span");
+
 
 async function obtenerRecetas() {
     const respuesta = await fetch("https://dummyjson.com/recipes");
@@ -161,4 +162,4 @@ async function searchBar() {
     const recetas = await obtenerRecetas();
     mostrarRecetas(recetas);
     await cargarCategoriasCuisine();
-})();
+})(); 
