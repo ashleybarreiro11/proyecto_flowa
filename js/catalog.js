@@ -5,6 +5,13 @@ async function food (){
     return jsonfood
 }
 
+async function foodSearch (){
+    const searchGet = await fetch(`https://dummyjson.com/recipes/search?q=${inputsearchBar.value}`)
+    const parsefood = await searchGet.json()
+    console.log(parsefood)
+    return parsefood
+}
+
 const data = food()
 console.log(data);
 
@@ -44,21 +51,11 @@ function detail(id){
     
 }
 
-async function toFavorites(id){
-  const data = await food()
-  const localUser = localStorage.getItem("logged-user")
-  const localUserJson = JSON.parse(localUser)
-  const favoriteRecipe = data.recipes.find(item => item.id === id)
-  localUserJson.favoritos.push(favoriteRecipe)
-  localStorage.setItem("logged-user", JSON.stringify(localUserJson))
-  const RegisteredUser = localUser.getItem("userRegistered")
-  const RegisteredUserJson = JSON.parse(RegisteredUser)
-   const userIndex = RegisteredUserJson.findIndex(item => item.email === localUserJson.email)
-    RegisteredUserJson[userIndex] = {
-      ...RegisteredUserJson[userIndex],
-      favoritos: localUserJson.favoritos
-    }
-    localStorage.setItem("userRegistered", JSON.stringify(RegisteredUserJson))
+
+function toFavorites(id){
+const localUser = localStorage.getItem("logged-user")
+const localUserJson = JSON.parse(localUser)
+console.log(localUserJson.favorites,id); 
 }
 
 async function searchBar() {
