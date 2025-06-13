@@ -58,3 +58,4 @@ async function toFavorites(id){
     localStorage.setItem("userRegistered", JSON.stringify(RegisteredUserJson))
 }
 
+
