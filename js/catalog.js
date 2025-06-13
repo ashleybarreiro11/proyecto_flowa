@@ -155,6 +155,7 @@ async function searchBar() {
         receta.name.toLowerCase().includes(texto)
     );
 
+    
     mostrarRecetas(filtradas);
 }
 
