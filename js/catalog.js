@@ -157,4 +157,4 @@ async function searchBar() {
     const recetas = await obtenerRecetas();
     mostrarRecetas(recetas);
     await cargarCategoriasCuisine();
-})();
+})(); 
